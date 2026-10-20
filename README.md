@@ -16,9 +16,10 @@
 
 ## 🛠 What's Currently Happening?
 
-Currently there is not much I have done, Right now I am working On getting the Base system running and booting, after that I will start adjusting most of the UI and adding EXE support and the (probably) Popular Add-Ons Workshop!
+Currently working on the base UI And GUI mod support for the OS, The Application used for modifying this GUI and such is currently in Beta so its not capable of much, but its usable and supports more customization than current build android (excluding custom launchers).
 
-I am also working on a developer Console so that i can test some features that are not present.
+## What to Expect After?
+After The current Application is polished(also meaning that base UI and GUI is polished) I will start working on fusing the GUI and .HUI files for adding support, meaning the current os will be able to understand the .hui files and change its UI to the instructions its told.
 
-For any question or recommendations you have please email me at haloteamint@gmail.com! 
+For any question or recommendations you have, please email me at haloteamint@gmail.com or leave a recommendation in our discord server in the Recom page!
 
