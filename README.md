@@ -1,25 +1,54 @@
-#  IndeXOS (previously named Halo Early Access Preview)
+# IndexOS (formerly Halo Early Access Preview)
 
-> This Project is currently ran by me, myself, and I, but that's okay!
-> IndeXOS is a custom OS based on linux with the purpose of being able to save a lot of battery and lengthen the life of a small battery, its also meant to bring native EXE file support to Mobile Devices( Only IndeX Phones unfortunatly) its also soon to have AirPod, Airdrop, And Galaxy Buds Support!
+> **IndexOS** is an optimized, Linux-based mobile operating system designed to maximize battery longevity, deliver native performance, and power a modular hardware ecosystem.
 
-[![GitHub Pages](https://img.shields.io/badge/site-live-brightgreen?style=flat-square)](https://halo-eap.github.io/halo-early-access-previews/)
+[![GitHub Pages](https://img.shields.io/badge/site-live-brightgreen?style=flat-square)](https://halo-eap.github.io/index-os-preview/)
 [![Status](https://img.shields.io/badge/status-active_alpha-blue?style=flat-square)](#)
 
 ---
 
 ## 🌌 Overview
 
-**IndeXOS** is an experimental mobile operating system built around modern UI principles, fluid animations, and high-performance desktop environment docking. This repository serves as the official public web portal for early-access updates, system status metrics, release notes, and community feedback.
+**IndexOS** is an experimental mobile operating system built around modern UI principles, fluid animations, and desktop environment docking. Engineered for efficiency and customizability, IndexOS aims to extend small battery lifespan while offering native `.exe` binary support specifically tuned for **Index Phone** hardware.
+
+This repository serves as the official public portal for early-access updates, system status metrics, release notes, and community feedback.
 
 ---
 
-## 🛠 What's Currently Happening?
+## 🔌 Hardware & Modular Docking Ecosystem
 
-Currently working on the base UI And GUI mod support for the OS, The Application used for modifying this GUI and such is currently in Beta so its not capable of much, but its usable and supports more customization than current build android (excluding custom launchers).
+IndexOS is built to seamlessly interface with dedicated modular hardware accessories:
 
-## What to Expect After?
-After The current Application is polished(also meaning that base UI and GUI is polished) I will start working on fusing the GUI and .HUI files for adding support, meaning the current os will be able to understand the .hui files and change its UI to the instructions its told.
+- **CoolDock**: Active thermal management and expansion dock for heavy workloads.
+- **Halet**: Portable companion ecosystem interface.
+- **TV Dock**: High-performance desktop and large-screen display output dock.
 
-For any question or recommendations you have, please email me at haloteamint@gmail.com or leave a recommendation in our discord server in the Recom page!
+---
 
+## 🛠️ Current Roadmap & Development Status
+
+### Current Focus: UI/GUI Modifier Tool
+- Actively developing the base UI and GUI modification suite for IndexOS.
+- Building the layout customization app (currently in Beta), designed to allow deeper interface personalization than standard Android environments.
+
+### Next Stage: `.hui` Layout Integration
+- Fusing the GUI parser with system `.hui` files.
+- Implementing native OS layout interpretation so IndexOS dynamically updates its UI based on `.hui` layout instructions.
+
+---
+
+## 🛜 Native Device & Accessory Support
+
+- **Native Binary Support**: Built-in support for running native `.exe` applications on Index Phones.
+- **Accessory Ecosystem**: Planned support for AirPods, AirDrop-style protocol transfers, and Galaxy Buds.
+
+---
+
+## 📬 Contact & Community
+
+For questions, feedback, or recommendations:
+- **Email**: haloteamint@gmail.com
+- **Community**: Drop a suggestion in the `#recom` channel in our Discord server!
+
+---
+*Developed by Juan Barajas.*
