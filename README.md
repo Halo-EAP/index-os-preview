@@ -51,4 +51,4 @@ For questions, feedback, or recommendations:
 - **Community**: Drop a suggestion in the `#recom` channel in our Discord server!
 
 ---
-*Developed by Juan Barajas.*
+*Developed by J.B.*
