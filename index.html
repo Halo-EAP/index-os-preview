@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IndeXOS — Custom Mobile Operating System</title>
+  <meta name="description" content="IndeXOS is an optimized, Linux-based mobile OS engineered for native performance, modular hardware docking, and battery efficiency." />
+  
+  <style>
+    /* Apple Human Interface Palette Variables */
+    :root {
+      --bg: #ffffff;
+      --card-bg: rgba(0, 0, 0, 0.03);
+      --card-border: rgba(0, 0, 0, 0.08);
+      --text-primary: #1d1d1f;
+      --text-secondary: #86868b;
+      --accent: #0071e3;
+      --badge-bg: #e8e8ed;
+      --badge-text: #1d1d1f;
+      --code-bg: #f5f5f7;
+    }
+
+    /* Auto Dark Mode (True OLED Black) */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #000000;
+        --card-bg: rgba(255, 255, 255, 0.05);
+        --card-border: rgba(255, 255, 255, 0.12);
+        --text-primary: #f5f5f7;
+        --text-secondary: #86868b;
+        --accent: #2997ff;
+        --badge-bg: #1c1c1e;
+        --badge-text: #f5f5f7;
+        --code-bg: #121212;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-primary);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 1.47059;
+      font-weight: 400;
+      letter-spacing: -0.022em;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    /* Header Styling */
+    .badge-container {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .status-badge {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 980px;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    h1 {
+      font-size: 56px;
+      line-height: 1.07143;
+      font-weight: 600;
+      letter-spacing: -0.005em;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      font-size: 24px;
+      line-height: 1.16667;
+      font-weight: 400;
+      color: var(--text-secondary);
+      margin-bottom: 40px;
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background-color: var(--card-border);
+      margin: 40px 0;
+    }
+
+    /* Section & Cards */
+    section {
+      margin-bottom: 48px;
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 17px;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 24px;
+      backdrop-filter: blur(20px);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+    }
+
+    .card h3 {
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 14px;
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 12px;
+    }
+
+    li {
+      font-size: 16px;
+      color: var(--text-secondary);
+      padding: 8px 0;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+
+    li strong {
+      color: var(--text-primary);
+    }
+
+    /* Links & Buttons */
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #ffffff;
+      padding: 12px 24px;
+      border-radius: 980px;
+      font-size: 15px;
+      font-weight: 500;
+      margin-top: 12px;
+      transition: opacity 0.2s ease;
+    }
+
+    .btn:hover {
+      opacity: 0.88;
+      text-decoration: none;
+    }
+
+    footer {
+      margin-top: 80px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <header>
+      <div class="badge-container">
+        <span class="status-badge">Active Alpha</span>
+        <span class="status-badge">Linux Core</span>
+      </div>
+      <h1>IndeXOS</h1>
+      <p class="subtitle">An optimized, Linux-based mobile operating system built for native performance, battery longevity, and modular hardware docking.</p>
+      <a href="https://github.com/Halo-EAP/index-os-preview" class="btn">View Source on GitHub</a>
+    </header>
+
+    <hr />
+
+    <section>
+      <h2>🌌 Overview</h2>
+      <p>IndeXOS is an experimental mobile platform designed around modern fluid UI dynamics, efficient power delivery, and desktop environment extension. Engineered specifically for native <strong>IndeX Phone</strong> hardware, it delivers built-in support for native <code>.exe</code> binaries and fluid <code>.hui</code> layout styling.</p>
+    </section>
+
+    <section>
+      <h2>🔌 Native Hardware Ecosystem</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Custom Back Glass</h3>
+          <p>Engineered rear glass assembly optimized for active thermal dissipation and distinct visual identity.</p>
+        </div>
+        <div class="card">
+          <h3>CoolDock</h3>
+          <p>Active thermal expansion dock engineered to handle heavy system workloads and desktop workflows.</p>
+        </div>
+        <div class="card">
+          <h3>Halet</h3>
+          <p>Portable companion ecosystem interface designed for seamless peripheral interconnectivity.</p>
+        </div>
+        <div class="card">
+          <h3>TV Dock</h3>
+          <p>High-performance desktop display output dock supporting high-framerate multi-window scaling.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>🔒 Distribution & Testing Policy</h2>
+      <div class="card">
+        <h3>Closed Native Ecosystem</h3>
+        <p>IndeXOS will <strong>never</strong> be released as an open-source downloadable image, generic custom ROM, or public installer for third-party smartphones. All emulation software, OS simulators, and virtual hardware test stacks remain strictly private for internal engineering validation.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🛠️ Development Pipeline</h2>
+      <ul>
+        <li><strong>Phase 1: Software Core & GUI Parser</strong> — Finalizing base UI modifiers and <code>.hui</code> layout file parsing engines.</li>
+        <li><strong>Phase 2: Physical Board Testing</strong> — Flashing validated OS builds directly onto custom prototype circuit boards.</li>
+        <li><strong>Phase 3: Hardware Tooling & Manufacturing</strong> — Mass assembly of custom enclosures, thermal glass, and opening official customer pre-orders.</li>
+      </ul>
+    </section>
+
+    <hr />
+
+    <footer>
+      <p>Developed by J.B. &bull; Official Portal for Early Access Metrics & Status Updates</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
