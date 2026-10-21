@@ -9,31 +9,41 @@
 
 ## 🌌 Overview
 
-**IndeXOS** is an experimental mobile operating system built around modern UI principles, fluid animations, and desktop environment docking. Engineered for efficiency and customizability, IndeXOS aims to extend small battery lifespan while offering native `.exe` binary support specifically tuned for **IndeX Phone** hardware.
+**IndeXOS** is an experimental mobile operating system built around modern UI principles, fluid animations, and desktop environment docking. Engineered for efficiency and customizability, IndeXOS aims to extend battery lifespan while offering native `.exe` binary support specifically tuned for native **IndeX Phone** hardware.
 
 This repository serves as the official public portal for early-access updates, system status metrics, release notes, and community feedback.
 
 ---
 
+## 🔒 Closed Ecosystem & Testing Policy
+
+To preserve ecosystem stability, security, and performance optimizations:
+
+- **No Public/Custom ROM Releases**: IndeXOS will **never** be released as an open-source downloadable image, generic custom ROM, or public OS install for third-party smartphones (such as Android or iOS devices).
+- **Private Emulation Stack**: All virtual test environments, OS simulators, and software emulation tools are strictly **private and internal** for testing and system validation.
+
+---
+
 ## 🔌 Hardware & Modular Docking Ecosystem
 
-IndeXOS is built to seamlessly interface with dedicated modular hardware accessories:
+IndeXOS is built to seamlessly interface with dedicated native hardware and accessories:
 
+- **Custom Back Glass**: Physical devices feature specialized rear glass assemblies engineered for optimized thermal dissipation and distinct branding.
 - **CoolDock**: Active thermal management and expansion dock for heavy workloads.
 - **Halet**: Portable companion ecosystem interface.
 - **TV Dock**: High-performance desktop and large-screen display output dock.
 
 ---
 
-## 🛠️ Current Roadmap & Development Status
+## 🛠️ Roadmap & Manufacturing Pipeline
 
-### Current Focus: UI/GUI Modifier Tool
-- Actively developing the base UI and GUI modification suite for IndeXOS.
-- Building the layout customization app (currently in Beta), designed to allow deeper interface personalization than standard Android environments.
+### Current Software Focus
+1. **UI/GUI Modifier Tool**: Actively developing the base UI, layout customization suite, and modifier app.
+2. **`.hui` Layout Integration**: Fusing the GUI parser with system `.hui` files so IndeXOS dynamically updates its UI based on layout instructions.
 
-### Next Stage: `.hui` Layout Integration
-- Fusing the GUI parser with system `.hui` files.
-- Implementing native OS layout interpretation so IndeXOS dynamically updates its UI based on `.hui` layout instructions.
+### Hardware Transition Plan
+1. **Physical Board Testing**: Once major OS development and kernel stabilization are complete, testing will transition directly from virtual environments onto physical prototype boards.
+2. **Manufacturing & Pre-Orders**: Following physical board validation, development moves directly into final hardware manufacturing and customer pre-orders.
 
 ---
 
