@@ -1,0 +1,13 @@
+# IndeXOS
+
+> IndeXOS is a custom, Linux-based modular mobile operating system ecosystem built by J.B.
+
+## Ecosystem Features
+- **IndeXOS**: Core operating system layer and user interface.
+- **IndeX Phone**: Custom hardware target running native .exe binaries and .hui layout files.
+- **CoolDock**: Active thermal management and expansion dock.
+- **Halet**: Portable companion ecosystem interface.
+- **TV Dock**: Desktop display output dock.
+
+## Official Repository
+- GitHub: https://github.com/Halo-EAP/index-os-preview
