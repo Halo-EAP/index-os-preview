@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IndeXOS — a phone OS where the whole interface is a theme</title>
+  <meta name="description" content="IndeXOS is a Linux-based phone OS in pre-alpha: one .hui theme changes the whole interface, and the shell runs on a PC as a phone, desktop or tablet." />
+  <link rel="canonical" href="https://halo-eap.github.io/index-os-preview/" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Ctext x='32' y='44' font-family='Segoe UI,Arial' font-size='32' font-weight='700' fill='%23fff' text-anchor='middle'%3EIX%3C/text%3E%3C/svg%3E" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="stylesheet" href="assets/site.css" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="IndeXOS" />
+  <meta property="og:title" content="IndeXOS — a phone OS where the whole interface is a theme" />
+  <meta property="og:description" content="One .hui theme changes the whole interface: lock screen, launcher, settings and dock. Phone, desktop or tablet, on the same device. Pre-alpha." />
+  <meta property="og:url" content="https://halo-eap.github.io/index-os-preview/" />
+  <meta property="og:image" content="https://halo-eap.github.io/index-os-preview/assets/img/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="The IndeXOS wordmark with the headline: the whole interface is a theme." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="IndeXOS — a phone OS where the whole interface is a theme" />
+  <meta name="twitter:description" content="One .hui theme changes the whole interface — phone, desktop or tablet. Linux-based, pre-alpha." />
+  <meta name="twitter:image" content="https://halo-eap.github.io/index-os-preview/assets/img/og.png" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="wordmark" href="index.html"><span class="ix">IX</span><span>IndeXOS</span></a>
+      <div class="nav-links">
+        <a href="index.html" aria-current="page">Overview</a>
+        <a href="about.html">About</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="download.html">Download</a>
+      </div>
+      <a class="nav-cta" href="mailto:haloteamint@gmail.com?subject=Keep%20me%20posted%20on%20IndeXOS">Get updates</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap">
+      <span class="hero-pill"><span class="dot"></span>Pre-alpha · Linux core</span>
+      <h1 class="h1">The whole interface<br /><span class="dim">is a theme.</span></h1>
+      <p class="hero-sub">IndeXOS is a Linux-based phone OS. One <code>.hui</code> file describes the lock screen, launcher, dock and settings — and the same device draws itself as a phone, a desktop or a tablet when a dock is attached.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="roadmap.html">See what works today</a>
+        <a class="btn btn-ghost" href="download.html">Get the Designer</a>
+        <a class="textlink" href="https://github.com/Halo-EAP/index-os-preview">Source on GitHub</a>
+      </div>
+
+      <div class="stage">
+        <div class="dev phone"><img src="assets/img/phone.png" alt="The IndeXOS phone home screen: clock widget, four app icons, dock and navigation bar." width="390" height="800" /></div>
+        <div class="dev desktop"><img src="assets/img/desktop-start.png" alt="The IndeXOS desktop surface: top bar, desktop icons, taskbar and the start menu open." width="1280" height="800" /></div>
+        <div class="dev tablet"><img src="assets/img/tablet.png" alt="The IndeXOS tablet surface: status bar, centred app grid, floating dock." width="1024" height="768" /></div>
+      </div>
+      <p class="hero-caption">The shell running on a PC · same theme, three surfaces</p>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="sec">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">Why</p>
+          <h2 class="h2">One file. The whole interface.</h2>
+          <p class="body">Most phone interfaces are fixed. You can change the wallpaper and the icon pack, and the rest is decided for you. IndeXOS starts from the opposite place: the system is <em>described</em>, not hard-coded.</p>
+          <p class="body">A <code>.hui</code> theme carries every value the shell needs — colours, glass, corner radii, the status bar and clock, the app grid, the dock, navigation, the notification shade, the app switcher, settings layout and animation curves. Change the file, restart, and the whole interface is different.</p>
+          <p class="body">Because the shell draws from data, the same theme can also describe a desktop and a tablet. The hardware decides which one you get; the theme decides how it looks.</p>
+        </div>
+        <div class="card">
+          <h3 class="h3">Inside a <code>.hui</code></h3>
+          <p><code>manifest.json</code> — magic, format version, and a SHA-256 for every file in the archive.</p>
+          <p><code>profile.json</code> — the interface itself: element sets for the phone, plus separate sets for the desktop and tablet surfaces.</p>
+          <p><code>assets/</code> — wallpapers, icons and fonts the theme refers to.</p>
+          <p class="meta">FORMAT 6 · VALIDATED AND CLAMPED ON LOAD</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec soft">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Three surfaces</p>
+          <h2 class="h2">Same theme. Three shapes.</h2>
+          <p class="lede measure">The phone is one surface. Attach a dock and it becomes a desktop; attach the fold-out shell and it becomes a tablet. Each surface inherits the theme and can override the parts that matter.</p>
+        </div>
+
+        <div class="grid three">
+          <article class="card mode">
+            <div class="media tall"><img src="assets/img/phone.png" alt="Phone home screen with a clock widget and dock." width="390" height="800" /></div>
+            <div class="body">
+              <h3 class="h3">Phone</h3>
+              <p>Lock screen, launcher, dock, notification shade and app windows.</p>
+              <p class="meta">390 × 800</p>
+            </div>
+          </article>
+          <article class="card mode">
+            <div class="media wide"><img src="assets/img/desktop.png" alt="Desktop surface with top bar, icons and taskbar." width="1280" height="800" /></div>
+            <div class="body">
+              <h3 class="h3">Desktop</h3>
+              <p>Top bar, taskbar, window frames and a start menu, drawn when a dock is attached.</p>
+              <p class="meta">1280 × 800</p>
+            </div>
+          </article>
+          <article class="card mode">
+            <div class="media wide"><img src="assets/img/tablet.png" alt="Tablet surface with status bar, app grid and dock." width="1024" height="768" /></div>
+            <div class="body">
+              <h3 class="h3">Tablet</h3>
+              <p>Status bar, dock, app grid and split view for the larger shell.</p>
+              <p class="meta">1024 × 768</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Status</p>
+          <h2 class="h2">What works today.</h2>
+          <p class="lede measure">Pre-alpha, and honest about it: the software has real, tested parts, and the phone it is meant for does not exist yet.</p>
+        </div>
+
+        <div class="checks">
+          <div class="check"><span class="mark">✓</span><div><strong>The theme format and loader</strong><p>Every value is validated and clamped. A corrupt or hostile file is refused, and a theme that fails to load rolls back to the previous one.</p></div></div>
+          <div class="check"><span class="mark">✓</span><div><strong>Desktop and tablet as data</strong><p>The format defines separate element sets for the desktop and tablet shells, so a theme can style all three modes without code.</p></div></div>
+          <div class="check"><span class="mark">✓</span><div><strong>The Designer</strong><p>A Windows app that renders the phone, desktop and tablet shells live while you edit, then saves the result as a <code>.hui</code>.</p></div></div>
+          <div class="check"><span class="mark">✓</span><div><strong>The shell</strong><p>A Qt/QML shell loads an installed theme and draws the surface. Icons open windows, the desktop start menu works, and the surface switches at runtime.</p></div></div>
+          <div class="check"><span class="mark">✓</span><div><strong>Dock detection</strong><p>On Linux the shell reads USB devices and displays, recognises a dock, and records which surface to draw.</p></div></div>
+          <div class="check"><span class="mark">✓</span><div><strong>Tests that run</strong><p>The format and loader have a Python suite; the shell has click tests that drive real icons, menus and windows.</p></div></div>
+        </div>
+
+        <p class="note"><strong>Not built yet:</strong> the bootable OS image, the Windows and Android app runtimes, third-party app theming, the Workshop and community store, and all of the hardware. That is why there is nothing to install on a phone today.</p>
+
+        <div class="btn-row" style="margin-top: 28px;">
+          <a class="textlink" href="roadmap.html">See the full roadmap →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec soft">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Hardware direction</p>
+          <h2 class="h2">Designed around a dock.</h2>
+          <p class="lede measure">Concept work, drawn but not built. The phone is meant to be the computer, and the accessories are what change its shape.</p>
+        </div>
+
+        <div class="grid four">
+          <div class="card">
+            <h3 class="h3">Custom back glass</h3>
+            <p>Rear glass intended for active thermal dissipation and a distinct visual identity.</p>
+          </div>
+          <div class="card">
+            <h3 class="h3">CoolDock</h3>
+            <p>Active cooling with heatsink and fans, plus two USB-C, two USB-A, HDMI, DisplayPort and Ethernet for desktop work.</p>
+          </div>
+          <div class="card">
+            <h3 class="h3">Halet</h3>
+            <p>A portable shell with a larger screen, its own battery and a headphone jack.</p>
+          </div>
+          <div class="card">
+            <h3 class="h3">TV dock</h3>
+            <p>Display output for a large screen, with multi-window scaling.</p>
+          </div>
+        </div>
+
+        <p class="note"><strong>Concept only.</strong> No hardware has been manufactured. Enclosures, thermal glass and boards come after the software runs on a device.</p>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <h2 class="h2">Follow it as it gets built.</h2>
+        <p>Occasional updates when there is something real to show. No release date, because there isn't one worth guessing at.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="mailto:haloteamint@gmail.com?subject=Keep%20me%20posted%20on%20IndeXOS">Get updates by email</a>
+          <a class="btn btn-soft" href="download.html">Try the Designer</a>
+          <a class="textlink" href="about.html">About the project</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <div class="foot-in">
+      <div class="foot-top">
+        <div class="foot-brand">
+          <a class="wordmark" href="index.html"><span class="ix">IX</span><span>IndeXOS</span></a>
+          <p>A Linux-based phone OS where the interface is a theme. Built by J.B.</p>
+        </div>
+        <div class="foot-cols">
+          <div>
+            <h4>Product</h4>
+            <a href="about.html">About</a>
+            <a href="roadmap.html">Roadmap</a>
+            <a href="download.html">Download</a>
+          </div>
+          <div>
+            <h4>Project</h4>
+            <a href="https://github.com/Halo-EAP/index-os-preview">GitHub</a>
+            <a href="mailto:haloteamint@gmail.com">Email</a>
+            <a href="llms.txt">llms.txt</a>
+          </div>
+        </div>
+      </div>
+      <p class="foot-note"><span>Pre-alpha · the OS image is not public and is not planned to be.</span><span>Last updated 28 October 2026</span></p>
+    </div>
+  </footer>
+
+</body>
+</html>

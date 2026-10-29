@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roadmap — IndeXOS</title>
+  <meta name="description" content="IndeXOS roadmap: Phase 1 (theme format, loader, three-surface shell, dock detection) is in progress. Board testing and manufacturing are not started." />
+  <link rel="canonical" href="https://halo-eap.github.io/index-os-preview/roadmap.html" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Ctext x='32' y='44' font-family='Segoe UI,Arial' font-size='32' font-weight='700' fill='%23fff' text-anchor='middle'%3EIX%3C/text%3E%3C/svg%3E" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="stylesheet" href="assets/site.css" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="IndeXOS" />
+  <meta property="og:title" content="Roadmap — IndeXOS" />
+  <meta property="og:description" content="Phase 1 in progress: theme format, loader, three-surface shell, dock detection. Board testing and manufacturing are not started." />
+  <meta property="og:url" content="https://halo-eap.github.io/index-os-preview/roadmap.html" />
+  <meta property="og:image" content="https://halo-eap.github.io/index-os-preview/assets/img/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="The IndeXOS wordmark with the headline: the whole interface is a theme." />
+  <meta name="twitter:card" content="summary_large_image" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="wordmark" href="index.html"><span class="ix">IX</span><span>IndeXOS</span></a>
+      <div class="nav-links">
+        <a href="index.html">Overview</a>
+        <a href="about.html">About</a>
+        <a href="roadmap.html" aria-current="page">Roadmap</a>
+        <a href="download.html">Download</a>
+      </div>
+      <a class="nav-cta" href="mailto:haloteamint@gmail.com?subject=Keep%20me%20posted%20on%20IndeXOS">Get updates</a>
+    </div>
+  </nav>
+
+  <header class="pagehead">
+    <div class="wrap">
+      <p class="eyebrow">Roadmap</p>
+      <h1 class="h1">Where the work stands.</h1>
+      <p class="lede">Three phases. The first is partly built and tested, the other two have not started. No dates are published, because a date here would be a guess dressed up as a plan.</p>
+      <div class="btn-row">
+        <span class="state live"><span class="dot" style="background: currentColor; box-shadow: none;"></span>Phase 1 of 3 · in progress</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="sec">
+      <div class="wrap">
+
+        <article class="card phase">
+          <div class="phase-head">
+            <div>
+              <p class="phase-num">Phase 1 · Software core</p>
+              <h2 class="h3" style="font-size: 26px; margin: 6px 0 0;">A shell that draws itself from a theme</h2>
+            </div>
+            <span class="state live">In progress</span>
+          </div>
+          <p class="body" style="max-width: 660px;">The format, the loader, the Designer and the shell it renders. This is the phase that runs on a PC today, and the one the phone build will package.</p>
+
+          <div class="cols">
+            <div>
+              <h4>Working</h4>
+              <ul class="ticklist done">
+                <li>Theme format 6: phone, desktop and tablet element sets in one <code>.hui</code>.</li>
+                <li>Loader that validates types and ranges, clamps loose values and refuses hostile or corrupt archives.</li>
+                <li>Atomic install with rollback — a theme that fails to load, or keeps crashing the shell, is replaced by the previous one.</li>
+                <li>Designer for Windows: live phone, desktop and tablet preview, saved out as a <code>.hui</code>.</li>
+                <li>Qt/QML shell: theme in, three surfaces out, clickable icons, app windows, working start menu, runtime surface switch.</li>
+                <li>Dock detection on Linux: USB and display state read from the system, surface chosen and recorded for the shell.</li>
+                <li>Test suites for both halves: 75 format and loader tests, plus click tests that drive the shell.</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Next in this phase</h4>
+              <ul class="ticklist">
+                <li>First device build — package the shell for a supported phone and boot it.</li>
+                <li>Third-party app theming — an opt-in API and adapters so apps that are not ours follow the active theme.</li>
+                <li>The Workshop — install, switch and roll back themes from one app.</li>
+                <li>Dock detection on real hardware instead of mock devices.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="card phase" style="margin-top: 20px;">
+          <div class="phase-head">
+            <div>
+              <p class="phase-num">Phase 2 · Physical board testing</p>
+              <h2 class="h3" style="font-size: 26px; margin: 6px 0 0;">From a window on a PC to a phone in hand</h2>
+            </div>
+            <span class="state">Not started</span>
+          </div>
+          <p class="body" style="max-width: 660px;">Flashing validated builds onto prototype boards and running the shell on the hardware it was sized for. This is where thermals, battery behaviour, touch input and the real docks stop being assumptions. Dock detection has only been tested against simulated USB and display state so far.</p>
+        </article>
+
+        <article class="card phase" style="margin-top: 20px;">
+          <div class="phase-head">
+            <div>
+              <p class="phase-num">Phase 3 · Tooling and manufacturing</p>
+              <h2 class="h3" style="font-size: 26px; margin: 6px 0 0;">Enclosures, glass, and only then pre-orders</h2>
+            </div>
+            <span class="state">Not started</span>
+          </div>
+          <p class="body" style="max-width: 660px;">Case tooling, the thermal back glass and the docks. Pre-orders are not open, and will not open before there are physical boards running the software. Nothing on the hardware pages exists yet beyond design intent.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="sec soft">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">How it's checked</p>
+          <h2 class="h2">Claims on this site have tests behind them.</h2>
+          <p class="lede measure">The parts marked working are the parts with suites that fail when they break — not features that were seen once and written down.</p>
+        </div>
+
+        <div class="checks">
+          <div class="check"><span class="mark">✓</span><div><strong>Format and loader</strong><p>75 tests cover valid themes, out-of-range values, missing files, wrong hashes and malformed archives. A bad theme is rejected, not rendered halfway.</p></div></div>
+          <div class="check"><span class="mark">✓</span><div><strong>Interaction</strong><p>The shell's click tests open an app from the phone grid and dock, toggle the desktop start menu, open an app window and close it again.</p></div></div>
+          <div class="check"><span class="mark">✓</span><div><strong>Surface choice</strong><p>Dock detection is tested with simulated device trees: cooling dock, laptop dock and tablet shell each select the right surface, in the right order of precedence.</p></div></div>
+          <div class="check"><span class="mark">✓</span><div><strong>Screenshots on this site</strong><p>Every render is a frame from the shell itself, captured from the running app — not a mockup drawn for the website.</p></div></div>
+        </div>
+
+        <p class="note"><strong>What is not claimed:</strong> that IndeXOS boots on a phone, that any app runtime works, or that the hardware exists. Those are later phases, and the site will say so until they are done.</p>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <h2 class="h2">Get told when a phase moves.</h2>
+        <p>Updates go out when something real changes — a device build booting, an app runtime working, a dock recognised on hardware.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="mailto:haloteamint@gmail.com?subject=Keep%20me%20posted%20on%20IndeXOS">Get updates by email</a>
+          <a class="btn btn-soft" href="download.html">Try the Designer</a>
+          <a class="textlink" href="about.html">About the project</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <div class="foot-in">
+      <div class="foot-top">
+        <div class="foot-brand">
+          <a class="wordmark" href="index.html"><span class="ix">IX</span><span>IndeXOS</span></a>
+          <p>A Linux-based phone OS where the interface is a theme. Built by J.B.</p>
+        </div>
+        <div class="foot-cols">
+          <div>
+            <h4>Product</h4>
+            <a href="about.html">About</a>
+            <a href="roadmap.html">Roadmap</a>
+            <a href="download.html">Download</a>
+          </div>
+          <div>
+            <h4>Project</h4>
+            <a href="https://github.com/Halo-EAP/index-os-preview">GitHub</a>
+            <a href="mailto:haloteamint@gmail.com">Email</a>
+            <a href="llms.txt">llms.txt</a>
+          </div>
+        </div>
+      </div>
+      <p class="foot-note"><span>Pre-alpha · the OS image is not public and is not planned to be.</span><span>Last updated 28 October 2026</span></p>
+    </div>
+  </footer>
+
+</body>
+</html>

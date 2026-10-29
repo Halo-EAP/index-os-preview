@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Download — IndeXOS</title>
+  <meta name="description" content="Download the IndeXOS Designer for Windows (source build). No phone build exists yet: the OS image is not public and the app runtimes are not built." />
+  <link rel="canonical" href="https://halo-eap.github.io/index-os-preview/download.html" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Ctext x='32' y='44' font-family='Segoe UI,Arial' font-size='32' font-weight='700' fill='%23fff' text-anchor='middle'%3EIX%3C/text%3E%3C/svg%3E" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="stylesheet" href="assets/site.css" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="IndeXOS" />
+  <meta property="og:title" content="Download — IndeXOS" />
+  <meta property="og:description" content="The Designer for Windows, as a source build. No phone build exists yet, and the OS image is not public." />
+  <meta property="og:url" content="https://halo-eap.github.io/index-os-preview/download.html" />
+  <meta property="og:image" content="https://halo-eap.github.io/index-os-preview/assets/img/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="The IndeXOS wordmark with the headline: the whole interface is a theme." />
+  <meta name="twitter:card" content="summary_large_image" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="wordmark" href="index.html"><span class="ix">IX</span><span>IndeXOS</span></a>
+      <div class="nav-links">
+        <a href="index.html">Overview</a>
+        <a href="about.html">About</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="download.html" aria-current="page">Download</a>
+      </div>
+      <a class="nav-cta" href="mailto:haloteamint@gmail.com?subject=Keep%20me%20posted%20on%20IndeXOS">Get updates</a>
+    </div>
+  </nav>
+
+  <header class="pagehead">
+    <div class="wrap">
+      <p class="eyebrow">Download</p>
+      <h1 class="h1">Nothing to install on a phone. Yet.</h1>
+      <p class="lede">The Designer — the Windows app for building <code>.hui</code> themes — is available as a source build. The OS image is not public, and is not planned to be.</p>
+      <div class="btn-row">
+        <span class="state live">Designer · pre-alpha</span>
+        <span class="state">Phone build · not started</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="sec">
+      <div class="wrap">
+        <div class="grid two dl">
+
+          <div class="card">
+            <span class="state live" style="align-self: flex-start;">Windows · pre-alpha</span>
+            <h3 class="h3" style="margin-top: 14px;">Designer for Windows</h3>
+            <p>Builds <code>.hui</code> themes: edit the phone shell live — lock screen, home screen, app drawer, notifications, gestures, animations — switch to the desktop or tablet surface, and save the result as one theme file.</p>
+            <p class="meta" style="margin-top: 0;">HALOS-DESIGNER.ZIP · 36 KB · SOURCE BUILD</p>
+            <a class="btn btn-primary" href="https://github.com/Halo-EAP/index-os-preview/raw/main/halos-designer.zip">Download the source (zip)</a>
+          </div>
+
+          <div class="card">
+            <span class="state" style="align-self: flex-start;">Public</span>
+            <h3 class="h3" style="margin-top: 14px;">Source and status</h3>
+            <p>The repository behind this site: the Designer source, its update files, and these pages. Issues and theme suggestions are welcome there.</p>
+            <p class="meta" style="margin-top: 0;">GITHUB.COM/HALO-EAP/INDEX-OS-PREVIEW</p>
+            <a class="btn btn-soft" href="https://github.com/Halo-EAP/index-os-preview">Open on GitHub</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="sec soft">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">Before you download</p>
+          <h2 class="h2">It is a source build, not a finished app.</h2>
+          <p class="body">There is no packaged installer yet. You unzip it, run one script once, and get a portable executable. It needs Node.js, and it will be unsigned — so Windows may warn you the first time.</p>
+
+          <table class="spec">
+            <tr><th>System</th><td>Windows 10 or 11, 64-bit</td></tr>
+            <tr><th>Requires</th><td>Node.js LTS, for the one-time build</td></tr>
+            <tr><th>Install</th><td>None — <code>build-exe.bat</code> produces a portable <code>.exe</code></td></tr>
+            <tr><th>Signing</th><td>Unsigned pre-alpha. If SmartScreen appears: More info → Run anyway</td></tr>
+            <tr><th>Saves to</th><td><code>Documents\Halos Profiles</code></td></tr>
+            <tr><th>Build fails?</th><td>"Cannot create symbolic link" → enable Windows Developer Mode and retry</td></tr>
+          </table>
+        </div>
+        <div>
+          <img class="shot" src="assets/img/designer.jpg" alt="The Halos Profile Designer on Windows: a control panel on the left, the desktop surface preview in the middle, and theme details on the right." width="1280" height="661" />
+          <p class="shotcap">The Designer previewing the desktop surface of a theme.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">Not available</p>
+          <h2 class="h2">What you cannot download.</h2>
+          <p class="body">These are missing because they do not exist yet, or because they are deliberately internal — not because they are behind a sign-up.</p>
+        </div>
+        <div class="card">
+          <ul class="ticklist" style="margin-top: 0;">
+            <li><strong>The OS image.</strong> There is no IndeXOS build to flash onto a phone, and there is no public image planned.</li>
+            <li><strong>A phone installer.</strong> No ROM, no generic installer, no support for third-party Android or iOS devices.</li>
+            <li><strong>The app runtimes.</strong> Windows and Android app support is planned for IndeX hardware and not built.</li>
+            <li><strong>The emulation stack.</strong> The test environments stay internal.</li>
+            <li><strong>The Workshop.</strong> The theme installer and community store is on the roadmap, not in a download.</li>
+          </ul>
+          <p class="body" style="margin-top: 18px;">The theme format and the Designer are shared so themes can be made and tested. The system itself is closed by design — <a href="about.html#ecosystem">why</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <h2 class="h2">Be told when there is something to run.</h2>
+        <p>A phone build is the next real milestone. One email when it boots, another when a runtime works.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="mailto:haloteamint@gmail.com?subject=Keep%20me%20posted%20on%20IndeXOS">Get updates by email</a>
+          <a class="textlink" href="roadmap.html">See the roadmap</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <div class="foot-in">
+      <div class="foot-top">
+        <div class="foot-brand">
+          <a class="wordmark" href="index.html"><span class="ix">IX</span><span>IndeXOS</span></a>
+          <p>A Linux-based phone OS where the interface is a theme. Built by J.B.</p>
+        </div>
+        <div class="foot-cols">
+          <div>
+            <h4>Product</h4>
+            <a href="about.html">About</a>
+            <a href="roadmap.html">Roadmap</a>
+            <a href="download.html">Download</a>
+          </div>
+          <div>
+            <h4>Project</h4>
+            <a href="https://github.com/Halo-EAP/index-os-preview">GitHub</a>
+            <a href="mailto:haloteamint@gmail.com">Email</a>
+            <a href="llms.txt">llms.txt</a>
+          </div>
+        </div>
+      </div>
+      <p class="foot-note"><span>Pre-alpha · the OS image is not public and is not planned to be.</span><span>Last updated 28 October 2026</span></p>
+    </div>
+  </footer>
+
+</body>
+</html>
