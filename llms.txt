@@ -1,13 +1,33 @@
 # IndeXOS
 
-> IndeXOS is a custom, Linux-based modular mobile operating system ecosystem built by J.B.
+> IndeXOS is a Linux-based phone OS in pre-alpha where the whole interface is a `.hui` theme. Built by J.B.
 
-## Ecosystem Features
+## Pages
+- Overview: https://halo-eap.github.io/index-os-preview/
+- About: https://halo-eap.github.io/index-os-preview/about.html
+- Roadmap: https://halo-eap.github.io/index-os-preview/roadmap.html
+- Download: https://halo-eap.github.io/index-os-preview/download.html
+
+## What works today
+- Theme format 6: manifest, profile and assets in one `.hui` archive, with separate element sets for the phone, desktop and tablet surfaces.
+- Loader with validation, clamping, atomic install and rollback to the previous theme.
+- Designer for Windows (source build): live phone, desktop and tablet preview, saves `.hui`.
+- Qt/QML shell: draws the three surfaces, clickable icons, app windows, start menu, runtime surface switch. Runs on a PC.
+- Dock detection on Linux: reads USB and display state and records which surface to draw.
+
+## Not built yet
+- The bootable OS image, the Windows and Android app runtimes, third-party app theming, the Workshop and community store, and all hardware.
+
+## Ecosystem
 - **IndeXOS**: Core operating system layer and user interface.
 - **IndeX Phone**: Custom hardware target running native .exe binaries and .hui layout files.
 - **CoolDock**: Active thermal management and expansion dock.
 - **Halet**: Portable companion ecosystem interface.
 - **TV Dock**: Desktop display output dock.
 
+## Distribution
+The OS image is not public and is not planned to be. The theme format and the Designer are shared so themes can be made and tested.
+
 ## Official Repository
 - GitHub: https://github.com/Halo-EAP/index-os-preview
+- Contact: haloteamint@gmail.com
